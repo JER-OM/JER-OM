@@ -1,0 +1,20 @@
+
+**Project Overview**
+
+This project is a 2-Degree-of-Freedom (2DOF) robotic arm designed for Mars rock sample collection as part of a rover mission. The arm operates using two joint types: a prismatic joint driven by a linear actuator for vertical reach, and a revolute joint driven by a stepper motor for rotational positioning. The end-effector is a dual-finger gripper mechanism powered by servo actuators, capable of a maximum jaw opening of 260mm — sized to handle the range of rock specimens expected on Martian terrain. The system was designed to be compact, lightweight, and mechanically simple, making it suitable for integration onto a rover platform operating in remote, resource-constrained environments.
+
+---
+
+**Development & Technical Challenges**
+
+The development process involved translating core mechanical engineering fundamentals — including theory of machines, engineering mechanics, and kinematics — into a functional, integrated robotic system. Designing the arm required coordinating two independent joints so their combined motion could reliably position the gripper at target locations on uneven terrain, which demanded careful kinematic planning and joint sequencing.
+
+Several constraints shaped every design decision. Weight was a primary concern, as excess mass directly impacts rover mobility and power consumption. The 260mm maximum jaw opening had to be achieved within a compact form factor, requiring an efficient gear and linkage arrangement inside the end-effector. Cost reduction was another driver, pushing toward simpler mechanisms and fewer components without sacrificing reliability. Integrating the linear actuator, stepper motor, and servo actuators into a single coherent system while managing spatial conflicts between components was the central mechanical challenge throughout the process.
+
+---
+
+**Outcome**
+
+The completed arm successfully demonstrates the integration of multiple actuator types into a working 2DOF robotic system. The design meets its target specifications — achieving the required reach, jaw opening, and structural integrity within the weight and cost constraints set for the mission. Beyond the hardware, this project deepened practical understanding of how theoretical concepts from kinematics, mechanism design, and engineering mechanics translate into real design decisions. It also built confidence in navigating the trade-offs that define real engineering work: balancing performance, simplicity, weight, and cost simultaneously within a single system.
+
+---

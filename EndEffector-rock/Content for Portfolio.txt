@@ -1,0 +1,21 @@
+--
+
+**Project Overview**
+
+This end-effector is a dedicated rock collection gripper designed to capture specimens with a minimum diameter of 150mm from Martian terrain. Unlike the maintenance gripper which demanded dexterous precision across multiple task types, this design had a singular, well-defined objective — reliable envelopment and secure retention of rock samples. The result is a deliberately simplified two-finger arc gripper, where each curved finger sweeps inward symmetrically, driven independently by a dedicated servo motor mounted directly to a compact sheet metal housing. The arc finger geometry was chosen specifically to wrap around irregular, convex rock surfaces and maximise contact area without requiring precise object alignment. The entire finger assembly is fully 3D printed, reducing part count, eliminating the need for machined components, and keeping the overall weight to a minimum.
+
+---
+
+**Development & Technical Challenges**
+
+The central design challenge was achieving reliable envelopment of a 150mm minimum rock diameter while keeping the assembly simple enough to fabricate, assemble, and replace quickly during field testing. The curved finger profile had to be geometrically tuned so that the arc motion of each finger converged correctly on the target size range without the fingers clashing or losing contact at the extremes of their sweep. Committing to full 3D printing for the finger structure introduced its own constraints — wall thickness, print orientation, and infill density all had to be optimised to ensure the fingers could withstand the reaction forces generated when gripping an unevenly shaped, potentially heavy rock specimen without warping or fracturing at the pivot joints.
+
+Keeping the assembly simple also meant minimising the number of moving parts and fasteners, which required careful integration of the servo horn directly into the finger pivot rather than introducing an intermediate linkage. This kept the part count low and made the assembly straightforward to dismantle and reprint individual components when needed — a practical consideration in a competitive rover mission environment where turnaround time matters.
+
+---
+
+**Outcome**
+
+The completed gripper demonstrates that a task-specific end-effector can be significantly simpler, lighter, and faster to manufacture than a general-purpose design when the mission requirement is clearly defined. The fully printed finger assembly validated that FDM fabrication alone is sufficient for this load case, removing the need for any metal reinforcement in the fingers and further reducing weight. The symmetrical arc motion reliably envelops rocks at and above the 150mm target diameter with consistent contact, confirming the geometry selection was appropriate. This project reinforced the value of design scope discipline — knowing when to simplify is as important an engineering skill as knowing how to add capability.
+
+---

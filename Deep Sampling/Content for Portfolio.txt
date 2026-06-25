@@ -1,0 +1,25 @@
+
+
+---
+
+**Project Overview**
+
+The Deep Sampling Module is a rover-mounted soil collection system designed to extract subsurface samples from depths of up to 300mm. The system operates in two sequential stages: Stage 1 deploys the entire module downward from the rover body to make ground contact, while Stage 2 drives the auger drill into the soil to extract the sample. Motion in Stage 1 is delivered by a linear actuator guided by precision rail guides, ensuring controlled and stable vertical descent. Stage 2 couples a DC motor producing 1.5Nm of torque with a second linear actuator to simultaneously extend and rotate the auger, drawing soil upward through the helical flighting and into a servo-controlled sample container.
+
+The auger itself is entirely 3D printed, as are the majority of structural components, using FDM technology with PLA and PETG materials selected for their balance of stiffness, print reliability, and low mass. The mounting structure attached to the rover is fabricated from 1.6mm aluminium 6061 sheet metal, keeping the base rigid while contributing minimal weight. The complete system weighs just 5kg — a result of deliberate material selection and design optimisation at every level.
+
+---
+
+**Development & Technical Challenges**
+
+Designing the module around additive manufacturing from the outset fundamentally shaped every structural and mechanical decision. FDM-printed parts offered significant weight savings, but required careful orientation planning, wall thickness control, and infill optimisation to ensure they could withstand the axial and torsional loads generated during drilling. The auger presented a particular challenge: it needed to be geometrically accurate enough to generate consistent soil uplift while being manufacturable on a standard FDM printer without support-intensive geometries.
+
+The two-stage telescopic deployment introduced complexity in load path management — Stage 1 had to remain rigid and stable under the reaction forces generated when Stage 2 drilled into compacted soil. Aligning the guide rails to prevent binding during descent, while keeping the overall envelope compact enough for rover integration, required iterative prototyping. Constraining total system weight to 5kg while housing two linear actuators, a DC motor, a servo, guide rails, and a sample container pushed every component toward its minimum viable form. The 1.6mm aluminium sheet metal chassis had to be carefully folded and reinforced at stress concentrations to maintain structural integrity without adding mass.
+
+---
+
+**Outcome**
+
+The completed module demonstrates that a capable deep-sampling system can be built within tight mass and cost constraints by committing to additive manufacturing as a primary fabrication method rather than a supplement to conventional machining. The system successfully integrates mechanical, electromechanical, and structural elements into a 5kg package that mounts directly onto a rover chassis. The physical prototype validates the two-stage deployment concept and confirms that FDM-printed PETG and PLA components can survive the operational loads of auger-based soil drilling. This project developed practical expertise in design-for-additive-manufacturing, multi-actuator system integration, and lightweight structural design — skills directly applicable to real aerospace and field robotics engineering.
+
+---

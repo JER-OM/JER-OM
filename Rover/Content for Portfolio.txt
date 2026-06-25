@@ -1,0 +1,23 @@
+
+
+---
+
+**Project Overview**
+
+Ad Astra is a student-built Mars analogue rover developed to compete at the International Rover Challenge 2026, where the team achieved a Silver finish — competing against university teams including PhD-level participants from across the world. The rover is a fully integrated system encompassing mechanical, embedded, and software subsystems, designed to perform autonomous navigation, science sampling, and equipment servicing tasks on simulated Martian terrain. My primary responsibility was the mechanical design and development of the science subsystem, which included a parallel jaw maintenance end-effector, a deep soil sampling module, and a dedicated rock collection gripper. Beyond mechanical design, I actively contributed across subsystems — preparing the URDF model for software simulation, deriving forward and inverse kinematic equations for the robotic arm, and supporting the embedded team with wire harnessing, soldering, and implementing communication protocols within the master-slave architecture.
+
+---
+
+**Development & Technical Challenges**
+
+Working on a multidisciplinary rover team compressed years of theoretical learning into a single development cycle. Every design decision carried real consequences — weight saved on one subsystem meant more payload budget for another, and a mechanism that failed during field testing had to be redesigned, reprinted, and retested within days. The maintenance end-effector required balancing gripping force, adaptability across task types, and a total weight under 850g. Variable-infill TPU contact pads were introduced to solve the surface conformity problem on irregular objects without adding rigid complexity to the finger geometry. The deep sampling module demanded integration of two linear actuators, a 1.5Nm DC motor, and an auger within a 5kg system that had to survive the shock and vibration of deployment onto compacted soil. The rock collection gripper pushed in the opposite direction — maximum simplicity, achieving reliable capture of unshaped rocks up to 5kg at only 350g total mechanism weight.
+
+Contributing to the software and embedded sides exposed a different class of challenge. Building the URDF required precise understanding of joint frames and link geometry that fed directly back into improving the physical design. Deriving the inverse kinematic equations made the arm's workspace constraints tangible in a way that CAD alone does not. On the embedded side, learning wire harnessing discipline, soldering standards, and the logic of master-slave communication architecture gave a complete picture of how mechanical outputs translate into system-level behaviour.
+
+---
+
+**Outcome**
+
+The team achieved a Silver finish at the International Rover Challenge 2026, validating the rover as a competitive, field-ready system against some of the strongest university robotics teams in the region. Every science subsystem mechanism was successfully deployed and operated during the competition, including the soil sampling module and both end-effectors. Personally, this project was the most significant engineering experience of my undergraduate career — it is where design work moved from isolated assignments into a real system with real stakes. The cross-subsystem exposure built a level of engineering breadth that no single-discipline project could have provided, and the ongoing development of cycloidal drives, individual wheel drives, and RPY wrist mechanisms continues to extend that foundation.
+
+---

@@ -1,0 +1,22 @@
+
+---
+
+**Project Overview**
+
+The End-Effector is a precision parallel jaw gripper designed for rover-based maintenance operations in remote environments. Unlike collection-focused grippers, this design targets dexterous manipulation tasks including payload lifting up to 5kg, toggle switch and latch actuation, tool pick-and-place, typing, and USB insertion — applications that demand both controlled force delivery and fine positional accuracy. The mechanism is built around a symmetrical dual four-bar linkage system, where each finger is independently actuated by a dedicated 150 kg·cm servo motor, producing pure parallel jaw motion throughout the full stroke. This ensures consistent full-face contact across objects of varying geometry, making it reliable across the broad range of form factors encountered in maintenance work. The gripper achieves a maximum jaw opening of 200mm over a working range of 160mm, with the complete assembly weighing only 850g.
+
+---
+
+**Development & Technical Challenges**
+
+The primary design challenge was engineering a single gripper capable of spanning two extremes — generating enough force to lift a 5kg payload while remaining precise enough for delicate operations such as USB insertion and switch toggling. The four-bar linkage geometry on each finger was synthesised to maintain consistent jaw parallelism across the full working range, which was critical for tasks requiring repeatable, accurate finger placement. The final configuration of an 80mm finger with a 35mm input link produces 184N of fingertip force per side, meeting the payload requirement while remaining controllable for fine manipulation.
+
+Material selection had to balance stiffness, weight, and surface compliance. The structural frame is fabricated from 3mm aluminium 6061 sheet metal for rigidity, with PLA fingers reinforced by 2mm aluminium strips to meet bending stiffness demands under load. Contact pads are printed in variable-infill TPU with a contoured profile, allowing the gripper to conform to irregular tool handles and connector housings without slipping. To validate structural integrity, static finite element analysis was conducted in SOLIDWORKS Simulation at 400N — more than double the nominal working load — confirming a maximum von Mises stress of 2.45 MPa against a 60 MPa yield strength, providing a robust safety margin for sustained operational use.
+
+---
+
+**Outcome**
+
+The completed end-effector demonstrates that a single lightweight gripper architecture can address the full spectrum of maintenance manipulation tasks required on a rover mission, from high-force lifting to precision connector engagement. The parallel jaw motion, TPU contact pads, and force-verified linkage design work together to make the gripper adaptable without mechanical reconfiguration. Finite element analysis confirms structural safety well beyond the working load range. This project developed practical expertise in mechanism synthesis, linkage kinematics, multi-task gripper design, and simulation-driven validation — capabilities directly applicable to field robotics and space systems engineering.
+
+---
