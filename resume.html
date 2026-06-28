@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Résumé — Jerom V</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── Resume page resets — pure white, print-ready ── */
+  .resume-page-bg {
+    background: #fff;
+    min-height: 100vh;
+    padding: 32px 0 64px;
+  }
+
+  .resume-action-bar {
+    max-width: 820px;
+    margin: 0 auto 20px;
+    padding: 0 24px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  /* The actual resume sheet — A4-like */
+  .cv {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 52px 56px 56px;
+    background: #fff;
+    color: #000;
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+
+  /* Name */
+  .cv-name {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 22pt;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 2px;
+    line-height: 1.1;
+  }
+
+  .cv-subtitle {
+    font-size: 9.5pt;
+    color: #000;
+    margin: 0 0 6px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .cv-contact {
+    font-size: 10pt;
+    color: #000;
+    margin: 0 0 4px;
+  }
+
+  /* Bold horizontal rule — thick like in PDF */
+  .cv-rule {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 10px 0 10px;
+  }
+
+  .cv-rule-thin {
+    border: none;
+    border-top: 1px solid #bbb;
+    margin: 8px 0 8px;
+  }
+
+  /* Section heading */
+  .cv-section {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #000;
+    margin: 0 0 5px;
+  }
+
+  /* Body text */
+  .cv-body {
+    font-size: 10.5pt;
+    color: #000;
+    line-height: 1.45;
+  }
+
+  .cv-body p { margin: 0 0 4px; }
+
+  /* Role / org lines */
+  .cv-role {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+  }
+
+  .cv-org {
+    font-size: 10pt;
+    color: #000;
+    margin: 0 0 4px;
+  }
+
+  /* Bullet list */
+  .cv-list {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 4px 0 10px;
+  }
+
+  .cv-list li {
+    font-size: 10.5pt;
+    color: #000;
+    line-height: 1.45;
+    margin-bottom: 3px;
+  }
+
+  /* Achievement list with arrows */
+  .cv-achieve {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0;
+  }
+
+  .cv-achieve li {
+    font-size: 10.5pt;
+    color: #000;
+    line-height: 1.45;
+    margin-bottom: 3px;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .cv-achieve li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  /* Skills rows */
+  .cv-skill-row {
+    font-size: 10.5pt;
+    color: #000;
+    margin-bottom: 3px;
+  }
+
+  .cv-skill-label { font-weight: 700; }
+
+  /* Sub-heading inside experience (e.g. IEEE EPICS) */
+  .cv-sub-head {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #000;
+    margin: 8px 0 2px;
+  }
+
+  /* Print styles */
+  @media print {
+    .nav, .site-footer, .resume-action-bar { display: none !important; }
+    .resume-page-bg { padding: 0; background: white; }
+    .cv {
+      border: none;
+      box-shadow: none;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    body { background: white !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-dot"></span>JEROM V</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html" aria-current="page">Résumé</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="resume-page-bg">
+
+  <!-- Action bar -->
+  <div class="resume-action-bar">
+    <button class="btn btn--primary" onclick="window.print()" style="font-size:12px;">⬇ Download PDF</button>
+  </div>
+
+  <!-- CV Sheet -->
+  <div class="cv">
+
+    <!-- HEADER -->
+    <p class="cv-name">JEROM V</p>
+    <p class="cv-subtitle">MECHANICAL AND AUTOMATION ENGINEERING UNDERGRADUATE | DESIGN &amp; R&amp;D ENTHUSIAST</p>
+    <p class="cv-contact"><strong>Phone:</strong> +91 91505 42321 &nbsp;&nbsp;&nbsp; <strong>Email:</strong> jeromvanathaian23@gmail.com &nbsp;&nbsp;&nbsp; <strong>Portfolio:</strong> <a href="https://jer-om.github.io/JER-OM/" target="_blank" style="color:#000;">https://jer-om.github.io/JER-OM/</a></p>
+
+    <hr class="cv-rule">
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <p class="cv-section">Professional Summary</p>
+    <div class="cv-body">
+      <p>Mechanical and Automation Engineering student with experience in mechanical design, CAD modelling, prototyping, and manufacturing. Lead of the Mechanical Subsystem for an autonomous rover team, skilled in product development, sheet metal design, DFMA, DFAM, URDF, fabrication, and testing. Passionate about robotics, automation, and R&amp;D engineering.</p>
+    </div>
+
+    <hr class="cv-rule">
+
+    <!-- EDUCATION -->
+    <p class="cv-section">Education</p>
+    <div class="cv-body">
+      <p><strong>Bachelor of Engineering in Mechanical and Automation</strong> | 2023 – present | CGPA: 8.08 (Up to 6<sup>th</sup> Sem)</p>
+      <p>Sri Sairam Engineering College, Chennai-44</p>
+    </div>
+
+    <hr class="cv-rule">
+
+    <!-- TECHNICAL SKILLS -->
+    <p class="cv-section">Technical Skills</p>
+    <div class="cv-body">
+      <p class="cv-skill-row"><span class="cv-skill-label">CAD &amp; Design:</span> SolidWorks, Fusion 360, AutoCAD, Sheet Metal Design</p>
+      <p class="cv-skill-row"><span class="cv-skill-label">Engineering &amp; Manufacturing:</span> DFMA, DFAM, URDF, Mechanism Design, Manufacturing Process Planning</p>
+      <p class="cv-skill-row"><span class="cv-skill-label">Fabrication:</span> 3D Printing, Laser Cutting, Welding, Lathe Operation, Prototype Development, Testing &amp; Validation</p>
+      <p class="cv-skill-row"><span class="cv-skill-label">Soft Skills:</span> Leadership, Team Collaboration, Problem Solving, Analytical Thinking, Communication</p>
+    </div>
+
+    <hr class="cv-rule">
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <p class="cv-section">Professional Experience</p>
+
+    <!-- Adastra -->
+    <p class="cv-role">Mechanical Subsystem Lead (2025 – Present)</p>
+    <p class="cv-role" style="font-weight:400;">Mechanical Subsystem Co-Lead (2024 – 2025) | <em>Adastra Autonomous Rover Team</em></p>
+    <ul class="cv-list">
+      <li>Developed a two-finger parallel gripping end-effector using four-bar linkage and servo actuation, capable of handling rugged objects up to 5 kg with an overall weight of 800 g.</li>
+      <li>Improved gripping reliability using variable infill TPU adaptive pads for enhanced contact with irregular surfaces.</li>
+      <li>Led the design, manufacturing, and testing of a 30 cm deep soil sampling system for ERC 2026 using telescopic mechanisms, additive manufacturing, and sheet metal design with a total system weight of 5 kg.</li>
+      <li>Developed a lightweight rock collection end-effector capable of handling unshaped rocks up to 5 kg with an overall mechanism weight of 350 g.</li>
+      <li>Coordinated prototyping, fabrication, subsystem integration, and testing while collaborating with embedded and software teams for rover development.</li>
+      <li>Currently developing cycloidal drive, individual wheel drive, and RPY wrist mechanisms for rover and robotic arm applications.</li>
+    </ul>
+
+    <!-- Delphi -->
+    <p class="cv-role">Manufacturing Intern | <em>Delphi-TVS, Oragadam</em> | 15-Day Internship</p>
+    <ul class="cv-list">
+      <li>Gained hands-on exposure to DFP6 diesel fuel pump manufacturing and assembly operations.</li>
+      <li>Observed precision machining processes including plunger bore grinding, honing, deburring, inspection, and assembly operations.</li>
+      <li>Learned manufacturing methodologies including Lean Manufacturing, Six Sigma, Poka-Yoke, 5S, Kaizen, and Theory of Constraints (TOC).</li>
+    </ul>
+
+    <!-- Freelance -->
+    <p class="cv-role">Freelance Mechanical Designer | <em>Self Employed</em></p>
+
+    <p class="cv-sub-head">IEEE EPICS Funded Project 2024</p>
+    <ul class="cv-list">
+      <li>Designed and contributed to the forest monitoring device (IEEE EPICS funded – $6,429), focusing on mechanical design and 3D manufacturing.</li>
+      <li>Developed the design of a water-waste collecting boat, applying engineering mechanics, CAD modelling, and cost-effective fabrication methods.</li>
+    </ul>
+
+    <p class="cv-sub-head">Client Project 2026</p>
+    <ul class="cv-list">
+      <li>Developed a conceptual design model for an ROV surveillance bot.</li>
+    </ul>
+
+    <p class="cv-sub-head">Mini Project | IEVU Cooling Unit</p>
+    <ul class="cv-list">
+      <li>Developed a sustainable onion storage system integrating Earth Air Tunnel cooling technology.</li>
+      <li>Applied HVAC fundamentals, heat transfer principles, and design calculations for thermal performance and airflow optimization.</li>
+    </ul>
+
+    <hr class="cv-rule">
+
+    <!-- ACHIEVEMENTS -->
+    <p class="cv-section">Achievements</p>
+    <ul class="cv-achieve">
+      <li>International Rover Challenge 2026 (Udupi, Karnataka) – Secured 2nd Runner-Up position.</li>
+      <li>University Rover Challenge 2025 (USA) – Finalist and the only team from India to attend the competition onsite in Utah.</li>
+      <li>International Rover Challenge 2025 (Goa, India) – Secured 15th position.</li>
+      <li>ASME TN-NOVATE 2.0 SDG Innovation Expo – Won 2nd Prize.</li>
+      <li>IEEE EPICS Funded Project 2024 ($6,429) – Contributed to the mechanical design.</li>
+    </ul>
+
+  </div><!-- /cv -->
+</div><!-- /resume-page-bg -->
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span class="footer-copy">© 2026 Jerom V — Sri Sairam Engineering College, Chennai</span>
+    <ul class="footer-links">
+      <li><a href="mailto:jeromvanathaian23@gmail.com">jeromvanathaian23@gmail.com</a></li>
+      <li><a href="tel:+919150542321">+91 91505 42321</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
